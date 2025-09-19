@@ -34,10 +34,10 @@
     background: linear-gradient(135deg, #ffc40c, #ffb800);
     color: #000000;
     border: none;
-    padding: 16px;
+    padding: 8px 16px;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-flex;
@@ -63,6 +63,7 @@
   transition: all 0.3s ease;
   /* padding: 8px; */
   padding-bottom: 16px;
+  margin-bottom: 16px;
 
   &:hover {
     transform: translateY(-5px);

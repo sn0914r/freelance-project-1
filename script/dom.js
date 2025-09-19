@@ -2,9 +2,8 @@ import { cardHTML } from "./cards.js";
 
 class DOM {
   constructor() {
-    console.log("hi");
     this.initializeFooter();
-    this.initializeCarCards();
+    // this.initializeCarCards();
   }
 
   initializeFooter() {
