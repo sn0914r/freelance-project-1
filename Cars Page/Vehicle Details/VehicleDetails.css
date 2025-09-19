@@ -1,0 +1,238 @@
+:root {
+  --primary-color: #ffc40c;
+  --secondary-color: #dc2626;
+  --background-color: #ffffff;
+  --text-color: #374151;
+  --card-bg: #fef2f2;
+  --border-color: #e5e7eb;
+  --muted-color: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.back-btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: #000000;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.back-btn:hover {
+  background: #e6b00a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.container-fluid {
+  max-width: 1400px;
+}
+
+.main-image-container {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail-container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 12px;
+  padding: 20px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnail {
+  min-width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  border-color: var(--primary-color);
+}
+
+.thumbnail.active {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 196, 12, 0.3);
+}
+
+.vehicle-info {
+  padding: 0 20px;
+}
+
+.vehicle-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.price-section {
+  background: var(--primary-color);
+  color: #000000;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(255, 196, 12, 0.3);
+}
+
+.original-price {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.discounted-price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.details-section {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.details-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.book-btn {
+  background: var(--primary-color);
+  color: #000000;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255, 196, 12, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255, 196, 12, 0.4);
+  background: #e6b00a;
+}
+
+.car-type {
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .vehicle-title {
+    font-size: 2rem;
+  }
+
+  .discounted-price {
+    font-size: 1.8rem;
+  }
+
+  .main-image {
+    height: 300px;
+  }
+
+  .vehicle-info {
+    padding: 0 15px;
+  }
+
+  .details-section {
+    padding: 20px;
+  }
+}

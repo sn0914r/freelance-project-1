@@ -1,6 +1,10 @@
+import { cardHTML } from "./cards.js";
+
 class DOM {
   constructor() {
+    console.log("hi");
     this.initializeFooter();
+    this.initializeCarCards();
   }
 
   initializeFooter() {
@@ -20,6 +24,21 @@ class DOM {
     phone.append(` ${DATA.phone}`);
     mail.append(` ${DATA.mail}`);
     socialMedia.innerHTML = media.join("");
+  }
+
+  initializeCarCards() {
+    const container = document.querySelector("#car-cards-container");
+
+    const cars = Object.entries(DATA.cars);
+    
+    let carsHTMLElements=[];
+    for (let car of cars) {
+      carsHTMLElements.push(
+        cardHTML(car[0], car[1]["path"], car[1]["price"], car[1]["discount"])
+      )
+    }
+
+    container.innerHTML = carsHTMLElements.join("")
   }
 }
 
