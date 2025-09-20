@@ -496,7 +496,7 @@ const BIKESDATA = [
     vehicleid: "b016",
     keys: [],
     path: "assets/duke1.jpg",
-    images: ["ktmduke1.jpg", "ktmduke2.jpg"],
+    images: ["duke1.jpg",],
     features: function () {
       return `Rent the KTM Duke for ₹${this.discountedPrice}/day (${this.kilometerLimit} km limit, no fuel; ₹5/km extra).`;
     },
