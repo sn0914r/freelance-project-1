@@ -18,6 +18,7 @@ export function carCardHtml(carname, path, price, discountedPrice, tags = ["car"
     </div>
 
     <a class="book-btn btn btn-primary" href="Vehicle Details/VehicleDetails.html?vehicleid=${vehicleid}">View Details</a>
+
   </div>
 </div>`;
 }

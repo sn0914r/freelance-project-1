@@ -44,7 +44,12 @@ const offcanvasHTML = `
       </ul>
 
       <div class="cta-btn">
-        <a class="btn" href="https://wa.me/919573340113" target="_blank">Book Now</a>
+        <a class="btn" 
+          href="https://wa.me/919573340113" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          Book Now
+        </a>
       </div>
     </div>
   </div>

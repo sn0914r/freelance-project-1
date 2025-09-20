@@ -324,8 +324,8 @@ const BIKESDATA = [
   },
   {
     name: "Fascino",
-    price: 950,
-    discountedPrice: 850,
+    price: 750,
+    discountedPrice: 600,
     vehicleid: "b004",
     keys: ["red"],
     path: "assets/fascino1.jpg",
@@ -352,8 +352,8 @@ const BIKESDATA = [
   },
   {
     name: "Honda Activa 6G",
-    price: 600,
-    discountedPrice: 500,
+    price: 700,
+    discountedPrice: 600,
     vehicleid: "b006",
     keys: ["black", "blue"],
     path: "assets/activa6g1.jpg",
@@ -408,10 +408,10 @@ const BIKESDATA = [
   },
   {
     name: "Yamaha MT15",
-    price: 700,
-    discountedPrice: 600,
+    price: 1400,
+    discountedPrice: 1299,
     vehicleid: "b010",
-    keys: ["black"],
+    keys: [],
     path: "assets/yamaha1.jpg",
     images: ["yamaha2.jpg", "yamaha1.jpg"],
     features: function () {
@@ -489,5 +489,18 @@ const BIKESDATA = [
     },
     kilometerLimit: 150,
     pricePerHr: 70,
+  },  {
+    name: "KTM Duke",
+    price: 1800,
+    discountedPrice: 1700,
+    vehicleid: "b016",
+    keys: [],
+    path: "assets/duke1.jpg",
+    images: ["ktmduke1.jpg", "ktmduke2.jpg"],
+    features: function () {
+      return `Rent the KTM Duke for ₹${this.discountedPrice}/day (${this.kilometerLimit} km limit, no fuel; ₹5/km extra).`;
+    },
+    kilometerLimit: 200,
+    pricePerHr: 200,
   },
 ];

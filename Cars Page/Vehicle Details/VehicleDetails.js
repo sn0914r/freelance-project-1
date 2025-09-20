@@ -83,7 +83,7 @@ function renderVehicleDetails() {
     detailValues[0].textContent = `₹${vehicle.discountedPrice}`;
     detailValues[1].textContent = `₹${vehicle.pricePerHr || 299}`;
     detailValues[2].textContent = vehicle.kilometerLimit || "Unlimited";
-    console.log(vehicle)
+    console.log(vehicle);
   }
 }
 
@@ -113,7 +113,8 @@ window.addEventListener("DOMContentLoaded", function () {
       const whatsappNumber = "919573340113";
       window.open(
         `https://wa.me/${whatsappNumber}?text=${encodedMsg}`,
-        "_blank"
+        "_blank",
+        "noopener,noreferrer"
       );
     });
   }
