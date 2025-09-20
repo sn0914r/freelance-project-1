@@ -58,9 +58,14 @@ function renderVehicleDetails() {
 
   // Vehicle info
   document.querySelector(".vehicle-title").textContent = vehicle.name;
-  document.querySelector(
-    ".car-type"
-  ).innerHTML = `<i class="fas fa-car me-2"></i>${vehicle.keys.join(", ")}`;
+
+  if (vehicle.keys.length > 0) {
+    document.querySelector(".car-type").innerHTML = `<i class="fas fa-car me-2"></i> ${vehicle.keys.join(", ")}`;
+  } else {
+    document.querySelector(".car-type").style.display = "none";
+  }
+
+  // Price section
   document.querySelector(".original-price").textContent = `₹${vehicle.price}`;
   document.querySelector(
     ".discounted-price"
