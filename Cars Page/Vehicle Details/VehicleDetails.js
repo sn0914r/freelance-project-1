@@ -19,7 +19,7 @@ function getVehicleIdFromUrl() {
 // Find vehicle by id
 function getVehicleData(vehicleid) {
   if (typeof CARSDATA === "undefined") return null;
-  return CARSDATA.find((car) => car.vehicleid === vehicleid);
+  return CARSDATA.concat(BIKESDATA).find((car) => car.vehicleid === vehicleid);
 }
 
 function renderVehicleDetails() {
@@ -71,7 +71,7 @@ function renderVehicleDetails() {
   if (featuresSection) {
     const featuresParagraph = featuresSection.querySelector("p");
     if (featuresParagraph) {
-      featuresParagraph.textContent = vehicle.features || "";
+      featuresParagraph.textContent = vehicle.features() || "";
     }
   }
 
@@ -81,10 +81,9 @@ function renderVehicleDetails() {
   );
   if (detailValues.length >= 3) {
     detailValues[0].textContent = `₹${vehicle.discountedPrice}`;
-    detailValues[1].textContent = `₹${Math.round(
-      vehicle.discountedPrice / 24
-    )}`;
+    detailValues[1].textContent = `₹${vehicle.pricePerHr || 299}`;
     detailValues[2].textContent = vehicle.kilometerLimit || "Unlimited";
+    console.log(vehicle)
   }
 }
 

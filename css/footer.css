@@ -24,6 +24,18 @@ footer {
   .contact-us p {
     margin-bottom: 0.5rem;
   }
+  .map-container {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #ffc40c;
+    height: 150px;
+    iframe {
+      width: 100%;
+      
+      border-radius: 8px;
+    }
+  }
 
   .btn.btn-outline-warning {
     border-radius: 50%;
